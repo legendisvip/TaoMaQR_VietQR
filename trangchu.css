@@ -1,0 +1,265 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap'); */
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+} */
+
+#wrapper0{
+    background: linear-gradient(163deg,#005aaa 19%,#0077c1 97%);
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 0; 
+    line-height: 65px;
+}
+
+
+
+/* MENU */
+#nav {
+    overflow: hidden;
+    background-color: #333;
+    line-height: 30px;
+}
+
+#nav ul {
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+#nav ul li {
+    float: left;
+}
+
+#nav ul li a {
+    color: white;
+    display: block;
+    padding: 15px;
+}
+
+#nav ul li a:hover {
+    background-color: #111;
+}
+
+.outer {
+    float: right;
+    right: 50%;
+    position: relative;
+}
+
+.inner {
+    float: right;
+    right: -50%;
+    position: relative;
+}
+
+
+
+/* SLIDE SHOW */
+.slideshow-container {
+    position: relative; 
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute; 
+    top: 50%; 
+    width: auto;
+    margin-top: -25px;
+    padding: 16px;
+    color: white;
+    font-weight: bold; 
+    font-size: 20px;
+    transition: 0.6s ease; 
+    border-radius: 0 3px 3px 0; 
+    user-select: none; 
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.fade {
+    animation-name: fade; 
+    animation-duration: 0s; 
+}
+
+@keyframes fade { 
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
+
+
+
+/* INFO AREA */
+#text1{
+    text-align: center;
+}
+
+#text2{
+    text-align: center;
+}
+
+#heading1{
+    text-align: center;
+    line-height: 85px;
+}
+
+#wrapper{   
+    border: 2px solid white;
+}
+
+#wrapper1{
+    margin: 1px auto 0;
+    width: 650px;
+    padding: 25px 15px;
+}
+
+#wrapper3{
+    border: 1px solid white;
+    margin: 1px auto 0;
+    width: 400px;
+    padding: 25px 15px;
+}
+
+#bankName{
+    border: 2px solid;
+    height: 50px;
+    padding: 0 20px;
+    font-size: 20px;
+    background: #fff;
+    border-radius: 7px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#content{
+    margin-top: 25px;
+}
+
+#content #search{
+    position: relative;
+}
+
+#search i{
+    top: 50%;
+    left: 15px;
+    color: #999;
+    font-size: 20px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+#search input{
+    height: 50px;
+    outline: none;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 0 20px 0 43px;
+    border: 2px solid black;
+    width: 100%;
+}
+
+#search input:focus{
+    padding-left: 42px;
+}
+
+#search input::placeholder{
+    color: #bfbfbf;
+}
+
+#content1{
+    margin-top: 25px;
+}
+
+#search1 input{
+    height: 50px;
+    outline: none;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 0 20px 0 43px;
+    width: 100%;
+}
+
+#create-qrcode{
+    height: 50px;
+    border: 2px solid black;
+    background: #fff;
+    border-radius: 7px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#rules{
+    margin-top: 25px;
+}
+
+
+
+/* Điều khoản và điều kiện */
+#dkdk{
+    background-color: white;
+}
+
+#dkdk li{
+    margin-left: 50px;
+}
+
+#imgBox{
+    width: 100%;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+  
+#imgBox img{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+  
+#imgBox.show-img{
+    max-height: 100%;
+    margin: 10px auto;
+}
+  
+@keyframes snake {
+    0%{
+      transform: translate(0);
+    }
+    25%{
+      transform: translate(-2px);
+    }
+    50%{
+      transform: translate(0);
+    }
+    75%{
+      transform: translate(2px);
+    }
+    100%{
+      transform: translate(0);
+    }
+}
+
+
+
+/* FOOTER */
+#footerMenu {
+    padding: 3px;
+    background: linear-gradient(163deg,#005aaa 19%,#0077c1 97%);
+}
+
+#tableDownload {
+    width: 100%;
+}

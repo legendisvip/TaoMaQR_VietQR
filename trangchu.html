@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">  
+        <title>VietQR</title>
+        <link rel="stylesheet" href="trangchu.css">
+        <link rel="icon" href="img\vietqr-icon-site.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div id="nav">     
+            <div class="outer">
+                <ul class="inner">
+                    <li><a href="trangchu.html">Trang chủ</a></li>
+                    <li><a href="gioithieu.html">Giới thiệu</a></li>
+                    <li><a href="dieukhoan.html">Điều khoản</a></li>
+                    <li><a href="tailieu.html">Tài liệu</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="slideshow-container">
+            <div class="Slide">                       
+                <a href="https://www.facebook.com/NapasVietnam/photos/a.410155795728010/4023503537726533"><img src="img\banner1-d.png" style="width:100%"></a>
+            </div> 
+            <div class="Slide">                 
+                <a href="https://www.facebook.com/NapasVietnam/photos/a.410155795728010/4023503537726533"><img src="img\banner2-d.png" style="width:100%"></a>
+            </div>  
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>         
+        <div id="wrapper0">Hệ thống tạo mã <a href="gioithieu.html" style="color: white;">VietQR</a></div>
+
+        <div id="wrapper">
+            <img id="pic" src="img\left-03.jpg" style="float: left;" height="530px" width="250px"/>
+            <img id="pic" src="img\right-03.jpg" style="float: right;" height="530px" width="250px"/>
+            <h1 id="heading1" style="text-align: center;"><b>THÔNG TIN THIẾT LẬP MÃ VIETQR</b></h1>
+            <div id="wrapper1">
+                <select id="bankName" name="mySelect" onclick="makeAPICall()">
+                    <option value="selectbank">Chọn 1 ngân hàng *</option>
+                </select>
+                <div id="content">
+                    <div id="search">
+                        <input type="number" placeholder="Số tài khoản thụ hưởng *" id="qrText1"/>
+                    </div>
+                </div>
+                <div id="content">
+                    <div id="search">
+                        <input type="text" placeholder="Tên chủ tài khoản *" id="qrText2"/>
+                    </div>
+                </div>
+                <div class="panel-group" style="margin-top: 20px;">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse1" title="Trường hợp mã QR có kèm số tiền và nội dung chuyển khoản, vui lòng cập nhật thêm thông tin dưới đây">Tùy chọn thêm</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                    <ul class="list-group">
+                        <div id="content1">
+                            <div id="search1">
+                                <input type="number" placeholder="Số tiền" id="qrText3"/>
+                            </div>
+                        </div>                    
+                        <div id="content1">
+                            <div id="search1">
+                                <input type="text" placeholder="Nội dung chuyển khoản" id="qrText4"/>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+                <div>* Thông tin bắt buộc</div>
+                <input type="checkbox" id="rules"/>
+                <label for="rules" title="ggwp"> Tôi đồng ý với các <a data-toggle="modal" data-target="#myModal">điều khoản và điều kiện</a></label><br>
+                <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Điều khoản và điều kiện</h4>
+                            </div>
+                            <div class="modal-body" style="text-align: justify;">
+                                <h1 id="text1"><b>ĐIỀU KIỆN VÀ ĐIỀU KHOẢN SỬ DỤNG VIETQR.NET</b></h1>
+                                <h2 id="text2">(Ngày hiệu lực: 23/02/2023)</h2>
+                                <div>Khi sử dụng tính năng tạo mã QR trên VietQR.net, Khách hàng được coi như đã đọc, chấp nhận và đồng ý chịu ràng buộc và cam kết tuân thủ các <b>Điều khoản sử dụng dưới đây.</b></div><br>
+                                <h3><b>I. GIẢI THÍCH TỪ NGỮ</b></h3>
+                                <div>Trong phạm vi Điều kiện, điều khoản này, các từ ngữ dưới đây được hiểu như sau:</div><br>
+                                <div>1.1. <i>Dịch vụ Chuyển nhanh Napas247 (gọi tắt là Napas247)</i>: Là dịch vụ cho phép khách hàng chuyển tiền từ tài khoản của mình tới một tài khoản tại một ngân hàng khác trong mạng lưới của Napas theo phương thức chuyển tiền nhanh 24/7 (thực hiện theo thời gian thực, 24 giờ/ngày, 7 ngày/tuần). Hạn mức tối đa 1 giao dịch là dưới 500 triệu đồng;</div><br>
+                                <div>1.2. <i>Khách hàng</i>: Là cá nhân, tổ chức có tài khoản thanh toán mở tại các ngân hàng cung cấp dịch vụ Napas247;</div><br>
+                                <div>1.3. <i>Mã QR/QR Code (Mã phản hồi nhanh) thanh toán</i>: là thông tin thanh toán được mã hóa gồm: Số tài khoản, Mã hiệu ngân hàng, Số tiền, Nội dung thanh toán, Thông tin đơn hàng và các thông tin liên quan khác (nếu có) giúp việc khởi tạo lệnh thanh toán được thực hiện Chính xác, Nhanh chóng và An toàn. Mã QR trong thanh toán tuân thủ theo tiêu chuẩn thanh toán QR của EMV Co. và Tiêu chuẩn cơ sở cho mã QR do Ngân hàng Nhà nước Việt Nam ban hành;</div><br>
+                                <div>1.4. <i>Mã QR khách hàng</i>: là mã QR do Khách hàng khởi tạo tại VietQR.net phục vụ cho việc chuyển khoản giữa các ngân hàng trong mạng lưới Napas247;</div><br>
+                                <div>1.5. <i>Chuyển khoản bằng mã QR</i>: là phương thức chuyển tiền giữa các tài khoản ngân hàng thông qua hình thức quét mã QR khách hàng;</div><br>
+                                <div>1.6. <i>VietQR</i>: là nhận diện thương hiệu dành cho các dịch vụ thanh toán, chuyển khoản bằng mã QR được xử lý qua mạng lưới Napas, các Ngân hàng thành viên, Trung gian thanh toán, các đối tác thanh toán tại Việt Nam và Quốc tế của Napas.</div><br>
+                                <h3><b>II. PHẠM VI SỬ DỤNG VIETQR.NET</b></h3>
+                                <div>Khách hàng sử dụng VietQR.net để tạo mã QR sử dụng cho dịch vụ Chuyển nhanh Napas247. Toàn bộ các thông tin tạo mã QR và mã QR của Khách hàng chỉ được biết, sử dụng bởi chính Khách hàng và không được tiếp cận hoặc lưu trữ bởi Napas.</div><br>
+                                <h3><b>III. QUYỀN VÀ TRÁCH NHIỆM CỦA KHÁCH HÀNG</b></h3>
+                                <div>3.1. Khách hàng được sử dụng miễn phí VietQR.net để tạo mã QR khách hàng, chia sẻ mã QR khách hàng cho bất cứ ai muốn chuyển tiền đến tài khoản của Khách hàng;</div><br>
+                                <div>3.2. Khách hàng chịu hoàn toàn trách nhiệm về <b><i>tính chính xác của các thông tin</i></b> (Tên ngân hàng, Số tài khoản, Tên tài khoản, Số tiền, Nội dung chuyển tiên) để tạo mã QR. Bất kỳ sai sót nào trong việc nhập các thông tin này cũng có thể dẫn đến việc tiền được chuyển vào một tài khoản không đúng hoặc số tiền không đúng hoặc giao dịch chuyển tiền không được thực hiện. Khách hàng tự chịu trách nhiệm đối với bất kỳ bất kỳ tổn thất nào gây ra bởi sự không chính xác của giao dịch chuyển tiền được thực hiện qua mã QR do Khách hàng yêu cầu tạo tại VietQR.net;</div><br>
+                                <div>3.3. Khách hàng chịu hoàn toàn trách nhiệm đối với việc chia sẻ, sử dụng và lưu trữ mã QR của khách hàng và trách nhiệm đối với các tổn thất phát sinh liên quan đến việc chia sẻ và sử dụng mã QR do Khách hàng tạo. Không sử dụng mã QR của khách hàng được tạo trên VietQR.net vào hoặc liên quan tới bất kỳ mục đích hoặc hoạt động phi pháp;</div><br>
+                                <div>3.4. Khách hàng Cam kết không can thiệp hoặc nỗ lực thay đổi bất kỳ nội dung, cấu phần nào của VietQR.net dưới bất kỳ hình thức nào;</div><br>
+                                <div>3.5. Khách hàng chịu trách nhiệm toàn diện đối với các sự cố/nguyên nhân phát sinh do lỗi từ phía Khách hàng:</div><br>
+                                <ul id="dkdk">
+                                    <li>i. Hệ thống kỹ thuật, đường truyền tin gặp sự cố, bị thâm nhập trái phép, hoặc vì bất kỳ lí do nào khác nằm ngoài phạm vi kiểm soát của Napas.</li>
+                                    <li>ii. Hệ thống kỹ thuật của Napas bị gián đoạn, gặp sự cố do bị tấn công mạng, nhiễm mã độc hoặc bị ảnh hưởng của những sự cố ngoài ý muốn khác.</li>
+                                </ul>
+                                <div>3.6. Khách hàng cam kết miễn trách cho Napas đối với các sự cố phát sinh nằm ngoại phạm vi kiểm soát, phòng ngừa và dự kiến của Napas dẫn đến việc không thể tạo mã QR của Khách hàng như:</div>
+                                <ul id="dkdk">
+                                    <li>i. Hệ thống kỹ thuật, đường truyền tin gặp sự cố, bị thâm nhập trái phép, hoặc vì bất kỳ lí do nào khác nằm ngoài phạm vi kiểm soát của Napas.</li>
+                                    <li>ii. Hệ thống kỹ thuật của Napas bị gián đoạn, gặp sự cố do bị tấn công mạng, nhiễm mã độc hoặc bị ảnh hưởng của những sự cố ngoài ý muốn khác.</li>
+                                </ul><br>
+                                <h3><b>IV. QUYỀN SỞ HỮU TRÍ TUỆ</b></h3>
+                                <div>Khách hàng đồng ý rằng Khách hàng không có quyền, yêu cầu hay lợi ích nào liên quan tới bất kỳ bản quyền, sáng chế, nhãn hiệu thương mại, tiêu chuẩn dịch vụ, tài sản, bí mật kinh doanh liên quan tới VietQR . Khách hàng đồng ý không đưa ra bất kỳ tuyên bố hoặc có bất kỳ hành động nào nhằm xác lập hoặc thực hiện quyền hay yêu cầu đối với các thông tin này.</div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Đồng ý</button>
+                            </div>
+                        </div>       
+                    </div>
+                </div>
+                <button id="create-qrcode" onclick="generateQR()">Tạo mã QR Code</button>
+            </div>
+            <div id="wrapper3">
+                <div id="imgBox">
+                    <img src="" id="qrImage">
+                </div>
+            </div>
+        </div>
+        <script src="trangchu.js"></script>
+    </body>
+    <footer id="footerMenu">
+        <table id="tableDownload">
+            <tr>
+                <th width="50px" style="background: white;"><img src="img\the-napas-la-gi-cong-thanh-toan-napas-la-gi-2411-7383.png" width="150px" height="100%"></th>
+                <th width="200px" style="background: white;">
+                    <p>Trụ sở chính</p>
+                    <p>Địa chỉ: Tầng 2, tầng 17 và tầng 18 tòa nhà Pacific Place, 83B phố Lý Thường Kiệt, Hoàn Kiếm, Hà Nội.</p>
+                    <p>Tel: 024 3936 1818</p>
+                </th>
+                <th width="200px" style="background: white;">
+                    <p>VP đại diện miền Nam</p>
+                    <p>Địa chỉ: Lầu 9, Sài gòn Tower, 29 Lê Duẩn, Phường Bến Nghé, Quận 1, thành phố Hồ Chí Minh.</p>
+                    <p>Tel: 0283 911 7155</p>
+                </th>
+                <th width="200px" style="background: white;">
+                    <a href="https://www.facebook.com/NapasVietnam/"><img src="img\logo-fb.webp" width="50px"></a>
+                    <a href="https://www.youtube.com/channel/UCc5yR3KB47BSHkuNSzvl8dQ"><img src="img\red-youtube-logo-social-media-logo_197792-1803.avif" width="50px"></a>
+                    <p>© 2022 by Napas Corporation. All right reserved.</p>
+                </th>
+            </tr>
+        </table>
+    </footer>
+</html>
